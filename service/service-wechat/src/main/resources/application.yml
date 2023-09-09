@@ -22,6 +22,3 @@ spring:
 mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
-wechat:
-  mpAppId: wx7191db99f28ec8d6
-  mpAppSecret: db1573551b031c5ea9b464745ffdbccc
