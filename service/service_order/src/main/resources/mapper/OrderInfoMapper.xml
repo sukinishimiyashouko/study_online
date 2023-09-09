@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wbu.mapper.OrderInfoMapper">
+
+    <resultMap id="BaseResultMap" type="com.wbu.model.order.OrderInfo">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="userId" column="user_id" jdbcType="BIGINT"/>
+            <result property="nickName" column="nick_name" jdbcType="VARCHAR"/>
+            <result property="phone" column="phone" jdbcType="VARCHAR"/>
+            <result property="originAmount" column="origin_amount" jdbcType="DECIMAL"/>
+            <result property="couponReduce" column="coupon_reduce" jdbcType="DECIMAL"/>
+            <result property="finalAmount" column="final_amount" jdbcType="DECIMAL"/>
+            <result property="orderStatus" column="order_status" jdbcType="VARCHAR"/>
+            <result property="outTradeNo" column="out_trade_no" jdbcType="VARCHAR"/>
+            <result property="tradeBody" column="trade_body" jdbcType="VARCHAR"/>
+            <result property="sessionId" column="session_id" jdbcType="VARCHAR"/>
+            <result property="province" column="province" jdbcType="VARCHAR"/>
+            <result property="payTime" column="pay_time" jdbcType="TIMESTAMP"/>
+            <result property="expireTime" column="expire_time" jdbcType="TIMESTAMP"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+            <result property="isDeleted" column="is_deleted" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,user_id,nick_name,
+        phone,origin_amount,coupon_reduce,
+        final_amount,order_status,out_trade_no,
+        trade_body,session_id,province,
+        pay_time,expire_time,create_time,
+        update_time,is_deleted
+    </sql>
+</mapper>

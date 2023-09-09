@@ -1,0 +1,27 @@
+server:
+  port: 8306
+spring:
+  profiles:
+    active: dev
+  application:
+    name: service-wechat
+  datasource:
+    #配置数据源类型
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/glkt_wechat?serverTimeZone=GMT%2B8&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: 111111
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+wechat:
+  mpAppId: wx7191db99f28ec8d6
+  mpAppSecret: db1573551b031c5ea9b464745ffdbccc

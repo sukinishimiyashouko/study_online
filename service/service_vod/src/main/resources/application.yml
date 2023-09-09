@@ -1,0 +1,38 @@
+server:
+  port: 8801
+
+spring:
+  #配置源信息
+  datasource:
+    #配置数据源类型
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/glkt_vod?serverTimeZone=GMT%2B8&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: 111111
+  application:
+    name: service-vod
+  profiles:
+    active: dev
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+  servlet:
+    multipart:
+      max-request-size: 1024MB
+      max-file-size: 1024MB
+tencent:
+  cos:
+    file:
+      region: ap-beijing
+      secretid: AKID0ymTwrdHoCTdfhrtqdGertmU3X8Yovwk
+      secretkey: c1HL6nOtNkCasCLkyxmO1TsDRWZaVHvQ
+      bucketname: study-online-1320809296
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

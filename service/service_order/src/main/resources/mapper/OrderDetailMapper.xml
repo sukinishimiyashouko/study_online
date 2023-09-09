@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wbu.mapper.OrderDetailMapper">
+
+    <resultMap id="BaseResultMap" type="com.wbu.model.order.OrderDetail">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="courseId" column="course_id" jdbcType="BIGINT"/>
+            <result property="courseName" column="course_name" jdbcType="VARCHAR"/>
+            <result property="cover" column="cover" jdbcType="VARCHAR"/>
+            <result property="orderId" column="order_id" jdbcType="BIGINT"/>
+            <result property="userId" column="user_id" jdbcType="BIGINT"/>
+            <result property="originAmount" column="origin_amount" jdbcType="DECIMAL"/>
+            <result property="couponReduce" column="coupon_reduce" jdbcType="DECIMAL"/>
+            <result property="finalAmount" column="final_amount" jdbcType="DECIMAL"/>
+            <result property="sessionId" column="session_id" jdbcType="VARCHAR"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+            <result property="isDeleted" column="is_deleted" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,course_id,course_name,
+        cover,order_id,user_id,
+        origin_amount,coupon_reduce,final_amount,
+        session_id,create_time,update_time,
+        is_deleted
+    </sql>
+</mapper>
