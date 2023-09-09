@@ -25,13 +25,6 @@ spring:
     multipart:
       max-request-size: 1024MB
       max-file-size: 1024MB
-tencent:
-  cos:
-    file:
-      region: ap-beijing
-      secretid: AKID0ymTwrdHoCTdfhrtqdGertmU3X8Yovwk
-      secretkey: c1HL6nOtNkCasCLkyxmO1TsDRWZaVHvQ
-      bucketname: study-online-1320809296
 
 mybatis-plus:
   configuration:
